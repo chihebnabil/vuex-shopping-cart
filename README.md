@@ -1,7 +1,7 @@
 # vuex shopping cart
-<figure class="iframe-container">
+<div  class="iframe-container">
 <iframe src="https://share.getcloudapp.com/geurjGdz?embed=true" width="575" height="400" style="border:none" frameborder="0" allowtransparency="true" allowfullscreen="true">              </iframe>
-</figure>
+</div>
 ## Project setup
 ```
 npm install
