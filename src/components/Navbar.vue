@@ -9,7 +9,7 @@
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-button variant="warning" v-show="$store.state.added.length > 0" >
+          <b-button @click="$router.push({name: 'shop.cart'})" variant="warning" v-show="$store.state.added.length > 0" >
             <font-awesome-icon icon="shopping-cart"></font-awesome-icon>
             <b-badge variant="light">{{ $store.state.added.length }}</b-badge>
           </b-button>
