@@ -1,4 +1,4 @@
-# vue-bootstrap-shop
+# vuex shopping cart
 
 ## Project setup
 ```
