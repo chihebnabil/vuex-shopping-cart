@@ -24,7 +24,7 @@
             <th scope="row" class="border-0">
               <div class="p-2">
                 <img
-                  src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg"
+                  :src="product.image"
                   alt
                   width="70"
                   class="img-fluid rounded shadow-sm"

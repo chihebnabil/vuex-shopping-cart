@@ -23,7 +23,7 @@ export default {
     ProductCard
   },
   mounted() {
-    axios.get("https://api.myjson.com/bins/jc3aa").then(response => {
+    axios.get("https://api.myjson.com/bins/9c81e").then(response => {
       this.products = response.data;
     });
   }

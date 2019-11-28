@@ -35,7 +35,8 @@ export default {
     commit(types.ADD_TO_CART, {
       id: product.id,
       name: product.name,
-      price: product.price
+      price: product.price,
+      image: product.image
     });
   },
   removeFromCart: ({ commit }, product) => {

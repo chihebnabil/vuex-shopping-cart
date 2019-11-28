@@ -38,7 +38,7 @@ export default {
   [TYPES.SET_CONFIGS](state, payload) {
     state.configs = { ...state.configs, ...payload };
   },
-  [TYPES.ADD_TO_CART](state, { id, name, price }) {
+  [TYPES.ADD_TO_CART](state, { id, name, price ,image }) {
     const record = state.added.find(p => p.id === id);
     console.log(name);
     if (!record) {
@@ -46,6 +46,7 @@ export default {
         id,
         name,
         price,
+        image,
         total: price,
         quantity: 1
       });
