@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
+    <div>
+      <br>
+      <b-jumbotron   text-variant="white" border-variant="dark"
+      bg-variant="info" header="VueShoppingCart" lead="Bootstrap v4 & Vue.js Cart">
+        <p>For more information check the github repo</p>
+        <b-button variant="warning" href="https://github.com/chihebnabil/vuex-shopping-cart">More Info</b-button>
+      </b-jumbotron>
+    </div>
     <div class="row d-flex justify-content-between">
       <product-card :product="product" :key="product.productId" v-for="product in products"></product-card>
     </div>
