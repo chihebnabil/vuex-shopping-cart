@@ -9,9 +9,11 @@
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#">
-            <font-awesome-icon icon="shopping-cart"
-          /></b-nav-item>
+          <b-button variant="warning" v-show="$store.state.added.length > 0" >
+            <font-awesome-icon icon="shopping-cart"></font-awesome-icon>
+            <b-badge variant="light">{{ $store.state.added.length }}</b-badge>
+          </b-button>
+
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template v-slot:button-content>
@@ -27,8 +29,15 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  data() {
+    return {
+    
+    };
+  },
+  mounted() {}
 };
 </script>
 

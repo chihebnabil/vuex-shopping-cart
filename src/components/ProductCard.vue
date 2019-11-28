@@ -1,23 +1,23 @@
 <template>
   <div>
     <b-card
-      :title="product.item"
-      img-src="https://picsum.photos/600/300/?image=25"
+      :title="product.name"
+      :img-src="product.image"
       img-alt="Image"
       img-top
       tag="product"
       style="max-width: 20rem;"
       class="mb-2"
     >
-      <b-card-text>{{ product.price }}</b-card-text>
-
-      <b-button href="#" @click="addToCart(product)" variant="primary"
-        >Add to Cart</b-button
-      >
+      <b-card-text>{{ product.detail }}</b-card-text>
+      <b-card-text>{{ product.price }} $</b-card-text>
+      <b-button href="#" @click="addToCart(product)" variant="primary">Add to Cart</b-button>
     </b-card>
   </div>
 </template>
 <script>
+import {mapState,mapActions } from 'vuex';
+
 export default {
   name: "ProductCard",
   props: {
@@ -29,7 +29,11 @@ export default {
   },
   methods: {
     addToCart(product) {
+       this.$store.commit('ADD_TO_CART',product)
     }
+  },
+  mounted(){
+   
   }
 };
 </script>
