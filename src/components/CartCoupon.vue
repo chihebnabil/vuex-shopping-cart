@@ -28,7 +28,7 @@
         <textarea name cols="30" rows="2" class="form-control"></textarea>
       </div>
     </div>
-   <CartSummary></CartSummary>
+    <CartSummary></CartSummary>
   </div>
 </template>
 <script>
@@ -37,11 +37,9 @@ import CartSummary from "@/components/CartSummary.vue";
 
 export default {
   name: "CartCoupon",
-  components: {CartSummary},
+  components: { CartSummary },
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {}
 };

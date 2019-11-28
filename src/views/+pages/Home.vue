@@ -2,11 +2,7 @@
   <div class="home">
     <h1>Home</h1>
     <div class="row d-flex justify-content-between">
-      <product-card
-        :product="product"
-        :key="product.productId"
-        v-for="product in products"
-      ></product-card>
+      <product-card :product="product" :key="product.productId" v-for="product in products"></product-card>
     </div>
   </div>
 </template>
