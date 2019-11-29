@@ -35,9 +35,6 @@ export default {
 </script>
 
 <style  scoped>
-.product-card {
- 
-}
 .product-card > img {
   max-height: 12rem;
   max-width: 12rem;

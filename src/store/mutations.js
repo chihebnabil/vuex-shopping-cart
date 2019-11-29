@@ -40,7 +40,6 @@ export default {
   },
   [TYPES.ADD_TO_CART](state, { id, name, price ,image }) {
     const record = state.added.find(p => p.id === id);
-    console.log(name);
     if (!record) {
       state.added.push({
         id,
@@ -55,7 +54,8 @@ export default {
       record.total = record.price * record.quantity;
     }
   },
-  [TYPES.REMOVE_FROM_CART](state, { product }) {
-    state.added.shift(product);
+  [TYPES.REMOVE_FROM_CART](state, id) {
+    let index = state.added.findIndex(x => x  === id);
+    state.added.splice(index, 1);
   }
 };

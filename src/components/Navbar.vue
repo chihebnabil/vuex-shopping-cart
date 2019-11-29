@@ -1,5 +1,5 @@
 <template>
-  <b-navbar sticky="true" toggleable="lg" type="dark" variant="info">
+  <b-navbar sticky toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="/">VueShoppingCart</b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>

@@ -23,12 +23,7 @@
           <tr :key="product.id" v-for="product in $store.state.added">
             <th scope="row" class="border-0">
               <div class="p-2">
-                <img
-                  :src="product.image"
-                  alt
-                  width="70"
-                  class="img-fluid rounded shadow-sm"
-                />
+                <img :src="product.image" alt width="70" class="img-fluid rounded shadow-sm" />
                 <div class="ml-3 d-inline-block align-middle">
                   <h5 class="mb-0">
                     <a href="#" class="text-dark d-inline-block align-middle">{{product.name}}</a>
@@ -44,10 +39,13 @@
               <strong>{{product.quantity}}</strong>
             </td>
             <td class="border-0 align-middle">
-                    <b-button @click="deleteItem(product)" variant="danger" v-show="$store.state.added.length > 0" >
-            <font-awesome-icon icon="trash"></font-awesome-icon>
-      
-          </b-button>
+              <b-button
+                @click="deleteItem(product.id)"
+                variant="danger"
+                v-show="$store.state.added.length > 0"
+              >
+                <font-awesome-icon icon="trash"></font-awesome-icon>
+              </b-button>
             </td>
           </tr>
         </tbody>
@@ -58,6 +56,7 @@
   </div>
 </template>
 <script>
+import { mapState, mapActions } from "vuex";
 import CartCoupon from "@/components/CartCoupon.vue";
 
 export default {
@@ -67,8 +66,9 @@ export default {
     return {};
   },
   methods: {
-    deleteItem(item){
-      this.$store.commit('REMOVE_FROM_CART',item)
+    deleteItem(id) {
+     
+      this.$store.commit("REMOVE_FROM_CART", id);
     }
   }
 };
