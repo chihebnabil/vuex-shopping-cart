@@ -23,7 +23,7 @@
           <h5 class="font-weight-bold">$ {{ subTotal + 10 }}</h5>
         </li>
       </ul>
-      <a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+      <a   @click="$router.push({name: 'shop.checkout'})" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
     </div>
   </div>
 </template>
