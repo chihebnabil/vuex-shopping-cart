@@ -1,10 +1,16 @@
 # vuex shopping cart
 
 
-![Alt Text](https://p192.p3.n0.cdn.getcloudapp.com/items/geurjGdz/Screen+Recording+2019-11-28+at+10.18.01.46+PM.gif?v=e5f9a3b537489bca42010264c3c89ea3)
+![Alt Text](https://p192.p3.n0.cdn.getcloudapp.com/items/4guxQ00W/Screen+Recording+2019-11-29+at+12.22.35.27+PM.gif?v=24cd2fc413c742c12bfe791cae4dbfda)
 
 
+### Pages
 
+- Home Page
+- Login
+- Signup
+- Cart
+- Checkout
 
 ## Project setup
 ```
