@@ -1,22 +1,20 @@
 <template>
-  <div>
-    <b-card
-      :title="product.name"
-      :img-src="product.image"
-      img-alt="Image"
-      img-top
-      tag="product"
-      style="max-width: 20rem;"
-      class="mb-2"
-    >
-      <b-card-text>{{ product.detail }}</b-card-text>
-      <b-card-text>{{ product.price }} $</b-card-text>
-      <b-button href="#" @click="addToCart(product)" variant="primary">Add to Cart</b-button>
-    </b-card>
-  </div>
+  <b-card
+    :title="product.name"
+    :img-src="product.image"
+    img-alt="Image"
+    img-top
+    tag="product"
+    style="max-width: 20rem;"
+    class="mb-2 product-card"
+  >
+    <b-card-text>{{ product.detail }}</b-card-text>
+    <b-card-text>{{ product.price }} $</b-card-text>
+    <b-button href="#" @click="addToCart(product)" variant="primary">Add to Cart</b-button>
+  </b-card>
 </template>
 <script>
-import {mapState,mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 
 export default {
   name: "ProductCard",
@@ -29,13 +27,22 @@ export default {
   },
   methods: {
     addToCart(product) {
-       this.$store.commit('ADD_TO_CART',product)
+      this.$store.commit("ADD_TO_CART", product);
     }
   },
-  mounted(){
-   
-  }
+  mounted() {}
 };
 </script>
 
-<style scoped></style>
+<style  scoped>
+.product-card {
+ 
+}
+.product-card > img {
+  max-height: 12rem;
+  max-width: 12rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+</style>
+

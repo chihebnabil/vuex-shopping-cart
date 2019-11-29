@@ -1,13 +1,7 @@
 <template>
   <div class="home">
-    <div>
-      <br>
-      <b-jumbotron   text-variant="white" border-variant="dark"
-      bg-variant="info" header="VueShoppingCart" lead="Bootstrap v4 & Vue.js Cart">
-        <p>For more information check the github repo</p>
-        <b-button variant="warning" href="https://github.com/chihebnabil/vuex-shopping-cart">More Info</b-button>
-      </b-jumbotron>
-    </div>
+    <h1 class="text-center">Bootstrap v4 & Vue.js Cart</h1>
+    <p  class="text-center">For more information check the github repo</p>
     <div class="row d-flex justify-content-between">
       <product-card :product="product" :key="product.productId" v-for="product in products"></product-card>
     </div>
@@ -30,7 +24,7 @@ export default {
     ProductCard
   },
   mounted() {
-    axios.get("https://api.myjson.com/bins/9c81e").then(response => {
+    axios.get("https://api.myjson.com/bins/wy3pu").then(response => {
       this.products = response.data;
     });
   }
