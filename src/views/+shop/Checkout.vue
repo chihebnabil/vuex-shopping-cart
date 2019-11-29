@@ -18,7 +18,7 @@
         
             <div class="total">
               Total
-              <span class="price">$320</span>
+              <span class="price">$ {{$store.state.cartTotal}}</span>
             </div>
           </div>
           <div class="card-details">

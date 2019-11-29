@@ -8,7 +8,7 @@
       <ul class="list-unstyled mb-4">
         <li class="d-flex justify-content-between py-3 border-bottom">
           <strong class="text-muted">Order Subtotal</strong>
-          <strong>${{ subTotal }}</strong>
+          <strong>${{ $store.state.cartTotal }}</strong>
         </li>
         <li class="d-flex justify-content-between py-3 border-bottom">
           <strong class="text-muted">Shipping and handling</strong>
@@ -20,7 +20,7 @@
         </li>
         <li class="d-flex justify-content-between py-3 border-bottom">
           <strong class="text-muted">Total</strong>
-          <h5 class="font-weight-bold">$ {{ subTotal + 10 }}</h5>
+          <h5 class="font-weight-bold">$ {{ $store.state.cartTotal + 10 }}</h5>
         </li>
       </ul>
       <a   @click="$router.push({name: 'shop.checkout'})" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
@@ -37,13 +37,10 @@ export default {
     };
   },
   mounted() {
-    this.subTotal = this.sum(this.$store.state.added);
   },
 
   methods: {
-    sum(arr) {
-      return arr.map(item => item.total).reduce((prev, curr) => prev + curr, 0);
-    }
+  
   }
 };
 </script>

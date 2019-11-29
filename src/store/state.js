@@ -3,6 +3,7 @@ export default {
   token: null,
   user: {},
   added: [],
+  cartTotal: 0,
   permissions: [],
   messages: {
     success: "",

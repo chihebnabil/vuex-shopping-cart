@@ -38,7 +38,7 @@ export default {
   [TYPES.SET_CONFIGS](state, payload) {
     state.configs = { ...state.configs, ...payload };
   },
-  [TYPES.ADD_TO_CART](state, { id, name, price ,image }) {
+  [TYPES.ADD_TO_CART](state, { id, name, price, image }) {
     const record = state.added.find(p => p.id === id);
     if (!record) {
       state.added.push({
@@ -53,9 +53,12 @@ export default {
       record.quantity++;
       record.total = record.price * record.quantity;
     }
+    state.cartTotal = state.added.map(item => item.total).reduce((prev, curr) => prev + curr, 0)
   },
   [TYPES.REMOVE_FROM_CART](state, id) {
-    let index = state.added.findIndex(x => x  === id);
+    let index = state.added.findIndex(x => x === id);
     state.added.splice(index, 1);
+    state.cartTotal = state.added.map(item => item.total).reduce((prev, curr) => prev + curr, 0)
+
   }
 };
