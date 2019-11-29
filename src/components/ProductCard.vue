@@ -6,7 +6,7 @@
     img-top
     tag="product"
     style="max-width: 20rem;"
-    class="mb-2 product-card"
+    class="mb-5 product-card"
   >
     <b-card-text>{{ product.detail }}</b-card-text>
     <b-card-text>{{ product.price }} $</b-card-text>

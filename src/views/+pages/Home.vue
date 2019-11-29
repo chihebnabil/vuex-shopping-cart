@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <h1 class="text-center">Bootstrap v4 & Vue.js Cart</h1>
-    <p  class="text-center">For more information check the github repo</p>
+    <p class="text-center">
+      For more information check
+      <a href="https://github.com/chihebnabil/vuex-shopping-cart">the github repo</a>
+    </p>
     <div class="row d-flex justify-content-between">
       <product-card :product="product" :key="product.productId" v-for="product in products"></product-card>
     </div>
