@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home-page">
     <h1 class="text-center">Bootstrap v4 & Vue.js Cart</h1>
     <p class="text-center">
       For more information check
